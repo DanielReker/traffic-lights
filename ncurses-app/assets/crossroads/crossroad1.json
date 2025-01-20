@@ -454,13 +454,24 @@
 			}
 		},
 		{
-			"name": "e1n3",
+			"name": "e1s3",
 			"from": {
 				"node": "e1",
-				"directionCoefficient": 30
+				"directionCoefficient": 40
 			},
 			"to": {
-				"node": "n3",
+				"node": "s3",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "e1s4",
+			"from": {
+				"node": "e1",
+				"directionCoefficient": 50
+			},
+			"to": {
+				"node": "s4",
 				"directionCoefficient": 20
 			}
 		},
@@ -487,13 +498,24 @@
 			}
 		},
 		{
-			"name": "w1s3",
+			"name": "w1n3",
 			"from": {
 				"node": "w1",
-				"directionCoefficient": 30
+				"directionCoefficient": 40
 			},
 			"to": {
-				"node": "s3",
+				"node": "n3",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "w1n4",
+			"from": {
+				"node": "w1",
+				"directionCoefficient": 50
+			},
+			"to": {
+				"node": "n4",
 				"directionCoefficient": 20
 			}
 		}
