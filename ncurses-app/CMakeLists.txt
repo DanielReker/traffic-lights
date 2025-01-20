@@ -39,7 +39,6 @@ if (Curses_FOUND OR unofficial-pdcurses_FOUND)
 		ICU::i18n
 		ICU::uc
 		ICU::data
-		spdlog::spdlog
 		fmt::fmt
 	)
 

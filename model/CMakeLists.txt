@@ -17,4 +17,5 @@ source_group(
 
 target_link_libraries(traffic-lights-model PUBLIC
 	Boost::json
+	spdlog::spdlog
 )

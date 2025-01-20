@@ -8,7 +8,7 @@
 #include "Path.hpp"
 #include "TrafficLights.hpp"
 #include "Car.hpp"
-
+#include "LoggerIncludes.hpp"
 
 namespace traffic_lights {
 namespace model {
