@@ -1,0 +1,8 @@
+{
+	"name": "traffic-lights-red",
+	"angle": 270,
+	"size": {
+		"x": 3,
+		"y": 7
+	}
+}

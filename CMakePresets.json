@@ -1,0 +1,113 @@
+{
+	"version": 3,
+	"configurePresets": [
+		{
+			"name": "common",
+			"hidden": true,
+			"binaryDir": "${sourceDir}/out/build/${presetName}",
+			"installDir": "${sourceDir}/out/install/${presetName}",
+			"cacheVariables": {
+				"CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+			}
+		},
+		{
+			"name": "msvc",
+			"hidden": true,
+			"inherits": "common",
+			"generator": "Ninja",
+			"cacheVariables": {
+				"CMAKE_C_COMPILER": "cl.exe",
+				"CMAKE_CXX_COMPILER": "cl.exe"
+			},
+			"condition": {
+				"type": "equals",
+				"lhs": "${hostSystemName}",
+				"rhs": "Windows"
+			}
+		},
+		{
+			"name": "x64-msvc",
+			"hidden": true,
+			"inherits": "msvc",
+			"architecture": {
+				"value": "x64",
+				"strategy": "external"
+			}
+		},
+		{
+			"name": "x64-msvc-release",
+			"inherits": "x64-msvc",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		},
+		{
+			"name": "x64-msvc-debug",
+			"inherits": "x64-msvc",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "mingw",
+			"hidden": true,
+			"inherits": "common",
+			"generator": "MinGW Makefiles",
+			"cacheVariables": {
+				"CMAKE_C_COMPILER": "gcc",
+				"CMAKE_CXX_COMPILER": "g++"
+			},
+			"condition": {
+				"type": "equals",
+				"lhs": "${hostSystemName}",
+				"rhs": "Windows"
+			}
+		},
+		{
+			"name": "x64-mingw",
+			"hidden": true,
+			"inherits": "mingw",
+			"cacheVariables": {
+				"VCPKG_TARGET_TRIPLET": "x64-mingw-static"
+			}
+		},
+		{
+			"name": "x64-mingw-release",
+			"inherits": "x64-mingw",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		},
+		{
+			"name": "x64-mingw-debug",
+			"inherits": "x64-mingw",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "linux",
+			"hidden": true,
+			"inherits": "common",
+			"condition": {
+				"type": "equals",
+				"lhs": "${hostSystemName}",
+				"rhs": "Linux"
+			}
+		},
+		{
+			"name": "x64-linux-release",
+			"inherits": "linux",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		},
+		{
+			"name": "x64-linux-debug",
+			"inherits": "linux",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		}
+	]
+}

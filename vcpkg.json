@@ -1,0 +1,16 @@
+{
+  "dependencies": [
+    {
+      "name": "pdcurses",
+      "platform": "windows & !uwp & !mingw"
+    },
+    {
+      "name": "boost-locale",
+      "features": [ "icu" ]
+    },
+    "boost-algorithm",
+    "boost-json",
+    "icu",
+    "spdlog"
+  ]
+}

@@ -1,0 +1,1 @@
+// This file is only used to create library CMake target, library itself is header only

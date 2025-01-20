@@ -1,0 +1,8 @@
+{
+	"name": "traffic-lights-green",
+	"angle": 180,
+	"size": {
+		"x": 11,
+		"y": 3
+	}
+}
