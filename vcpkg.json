@@ -12,6 +12,8 @@
     "boost-json",
     "icu",
     "spdlog",
-    "fmt"
+    "fmt",
+    "qtbase",
+    "sfml"
   ]
 }
