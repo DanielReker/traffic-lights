@@ -10,6 +10,8 @@ find_package(boost_algorithm REQUIRED CONFIG)
 find_package(boost_locale REQUIRED CONFIG)
 find_package(boost_json REQUIRED CONFIG)
 find_package(spdlog CONFIG REQUIRED)
+find_package(fmt CONFIG REQUIRED)
+
 
 add_subdirectory(model)
 

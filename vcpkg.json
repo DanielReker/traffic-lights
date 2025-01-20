@@ -11,6 +11,7 @@
     "boost-algorithm",
     "boost-json",
     "icu",
-    "spdlog"
+    "spdlog",
+    "fmt"
   ]
 }

@@ -2,6 +2,7 @@
 
 #include <map>
 #include <filesystem>
+#include <fmt/format.h>
 
 #include "Image.hpp"
 
@@ -30,7 +31,7 @@ public:
 		if (result)
 			return *result;
 		else
-			throw std::invalid_argument(std::format("Image '{}' not found", name));
+			throw std::invalid_argument(fmt::format("Image '{}' not found", name));
 	}
 
 	ImageStorage(const std::filesystem::path& directory) {
