@@ -75,13 +75,32 @@ public:
 		constexpr double min_speed_kmh = 10;
 		constexpr double max_speed_kmh = 30;
 
+		std::vector<std::shared_ptr<Node>> available_nodes;
+		for (auto node : source_nodes_) {
+			bool is_avaialble = true;
+			for (auto car : cars_) {
+				if (car.current_path().from().name() == node->name()) {
+					is_avaialble = false;
+					break;
+				}
+			}
+
+			if (is_avaialble)
+				available_nodes.push_back(node);
+		}
+
+		if (available_nodes.size() == 0) {
+			spdlog::info("Can't spawn car");
+			return;
+		}
+
 		std::uniform_real_distribution<double> speed_dist(min_speed_kmh, max_speed_kmh);
-		std::uniform_int_distribution<std::size_t> index_dist(0, source_nodes_.size() - 1);
+		std::uniform_int_distribution<std::size_t> index_dist(0, available_nodes.size() - 1);
 
 		cars_.push_back(Car(
 			paths_from_node_,
 			speed_dist(random_gen_),
-			*source_nodes_[index_dist(random_gen_)],
+			*available_nodes[index_dist(random_gen_)],
 			random_gen_
 		));
 

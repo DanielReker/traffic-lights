@@ -83,6 +83,8 @@ public:
 
 	bool IsActive() const { return !(current_path_index_ + 1 == route_.size() && current_t_ >= 1); }
 
+
+	const Path& current_path() const { return *(route_[current_path_index_]); }
 	Vector2d position() const { return route_[current_path_index_]->spline().point(current_t_); }
 	double angle() const {
 		auto direction = route_[current_path_index_]->spline().direction(current_t_);
