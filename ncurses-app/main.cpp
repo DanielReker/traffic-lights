@@ -23,7 +23,7 @@ std::atomic<bool> running(true);
 void control_crossroad(Crossroad& crossroad) {
     while (running) {
         std::this_thread::sleep_for(5ms);
-        crossroad.Update(0.01);
+        crossroad.Update();
     }
 }
 

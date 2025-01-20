@@ -26,6 +26,7 @@ private:
 	std::map<std::string, std::vector<std::shared_ptr<Path>>> paths_from_node_;
 
 	std::mt19937 random_gen_;
+	std::chrono::steady_clock::time_point last_update_;
 
 public:
 	Crossroad(const boost::json::value& crossroad)
@@ -38,7 +39,8 @@ public:
 			  crossroad.at_pointer("/bounds/max/x").to_number<double>(),
 			  crossroad.at_pointer("/bounds/max/y").to_number<double>()
 		  )),
-	      random_gen_(std::random_device{}()) {
+	      random_gen_(std::random_device{}()),
+		  last_update_(std::chrono::steady_clock::now()) {
 		
 		auto now = std::chrono::steady_clock::now();
 		std::map<std::string, std::vector<std::shared_ptr<Path>>> paths_to_node;
@@ -86,10 +88,16 @@ public:
 		spdlog::info("Spawned car at ({}, {})", cars_.back().position().x, cars_.back().position().y);
 	}
 
-	void Update(double time_elapsed_sec) {
+	void Update() {
+		auto now = std::chrono::steady_clock::now();
+		auto elapsed = now - last_update_;
+		double elapsed_seconds = std::chrono::duration<double>(elapsed).count();
+
 		for (auto& car : cars_) {
-			car.Move(time_elapsed_sec);
+			car.Move(elapsed_seconds);
 		}
+
+		last_update_ = now;
 	}
 
 	const auto& name() const { return name_; }
