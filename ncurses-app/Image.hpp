@@ -50,22 +50,7 @@ private:
 	static wchar_t Utf8CharacterToWchar(const std::string& utf8_character) {
 		constexpr wchar_t kUnknownCharacter = L'\uFFFD';
 		
-		/*std::stringstream formatted_utf8_hex_stream;
-		for (const auto& code_unit : utf8_character) {
-			formatted_utf8_hex_stream << std::hex << std::uppercase << std::setfill('0') << std::setw(2)
-				<< static_cast<int>(code_unit & 0xFF) << ' ';
-		}
-		SPDLOG_DEBUG("UTF-8 character: {}", formatted_utf8_hex_stream.str());*/
-
 		auto wchar_character = boost::locale::conv::utf_to_utf<wchar_t>(utf8_character);
-
-		/*std::stringstream formatted_wchar_hex_stream;
-		for (const auto& code_unit : wchar_character) {
-			formatted_wchar_hex_stream << std::hex << std::uppercase << std::setfill('0') << std::setw(2 * sizeof(wchar_t))
-				<< static_cast<int>(code_unit & ((1 << sizeof(wchar_t) * 8) - 1)) << ' ';
-		}
-		SPDLOG_DEBUG("Wchar character: {}", formatted_wchar_hex_stream.str());*/
-
 
 		if (wchar_character.size() == 1)
 			return wchar_character[0];

@@ -13,7 +13,6 @@
     "icu",
     "spdlog",
     "fmt",
-    "qtbase",
     "sfml"
   ]
 }

@@ -81,35 +81,6 @@ int main() {
         } else if (ch == 27) { // Escape
             running = false;
         }
-
-
-        /*Image frame = image_storage.GetImage("crossroad");
-
-        frame.AddOverlay(image_storage.GetImage("car", 0), Vector2d(31, 17));
-        frame.AddOverlay(image_storage.GetImage("car", 90), Vector2d(69, 25));
-        frame.AddOverlay(image_storage.GetImage("car", 180), Vector2d(89, 13));
-        frame.AddOverlay(image_storage.GetImage("car", 270), Vector2d(51, 5));
-
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-casing", 0), Vector2d(84, 9));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-red", 0), Vector2d(84, 9));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-yellow", 0), Vector2d(84, 9));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-green", 0), Vector2d(84, 9));
-
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-casing", 90), Vector2d(45, 5));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-red", 90), Vector2d(45, 5));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-yellow", 90), Vector2d(45, 5));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-green", 90), Vector2d(45, 5));
-
-
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-casing", 180), Vector2d(36, 21));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-red", 180), Vector2d(36, 21));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-yellow", 180), Vector2d(36, 21));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-green", 180), Vector2d(36, 21));
-
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-casing", 270), Vector2d(75, 25));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-red", 270), Vector2d(75, 25));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-yellow", 270), Vector2d(75, 25));
-        frame.AddOverlay(image_storage.GetImage("traffic-lights-green", 270), Vector2d(75, 25));*/
     }
 
     model_thread.join();

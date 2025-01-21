@@ -119,16 +119,6 @@ public:
 				dot.setPosition(node->position().x, node->position().y);
 				window.draw(dot);
 			}
-
-			/*for (const auto& [path_name, path] : crossroad.paths()) {
-				auto dot = Image::Dot(Color::kRed);
-				const CubicSpline2d& spline = path->spline();
-				for (double t = 0; t <= 1; t += 0.001) {
-					auto coordinates = TransformCoordinates(spline.point(t), crossroad, Vector2d(field.size().x, field.size().y));
-					auto direction = spline.direction(t);
-					field.AddOverlay(dot, coordinates);
-				}
-			}*/
 		}
 
 
