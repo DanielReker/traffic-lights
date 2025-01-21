@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 3.10)
 project(traffic-lights)
 
 option(BUILD_NCURSES_APP "Build Traffic Lights NCurses application" ON)
-option(BUILD_QT_APP "Build Traffic Lights QT application" ON)
+option(BUILD_QT_APP "Build Traffic Lights Qt application" OFF)
+option(BUILD_SFML_APP "Build Traffic Lights SFML application" ON)
 
 
 find_package(boost_algorithm REQUIRED CONFIG)
@@ -23,5 +24,7 @@ if(BUILD_QT_APP)
 	add_subdirectory(qt-app)
 endif()
 
-
+if(BUILD_SFML_APP)
+	add_subdirectory(sfml-app)
+endif()
 

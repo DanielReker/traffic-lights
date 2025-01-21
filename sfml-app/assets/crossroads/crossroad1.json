@@ -1,0 +1,629 @@
+{
+	"name": "crossroad1",
+	"bounds": {
+		"min": {
+			"x": 0,
+			"y": 0
+		},
+		"max": {
+			"x": 56.8,
+			"y": 30
+		}
+	},
+	"nodes": [
+		{
+			"name": "n1",
+			"position": {
+				"x": 24.4,
+				"y": 24
+			},
+			"angle": 270,
+			"trafficLights": "tn"
+		},
+		{
+			"name": "n1f",
+			"position": {
+				"x": 24.4,
+				"y": 35
+			},
+			"angle": 270
+		},
+		{
+			"name": "n2",
+			"position": {
+				"x": 27.3,
+				"y": 24
+			},
+			"angle": 270,
+			"trafficLights": "tn"
+		},
+		{
+			"name": "n2f",
+			"position": {
+				"x": 27.3,
+				"y": 35
+			},
+			"angle": 270
+		},
+		{
+			"name": "n3",
+			"position": {
+				"x": 30.2,
+				"y": 24
+			},
+			"angle": 90
+		},
+		{
+			"name": "n3f",
+			"position": {
+				"x": 30.2,
+				"y": 35
+			},
+			"angle": 90
+		},
+		{
+			"name": "n4",
+			"position": {
+				"x": 33,
+				"y": 24
+			},
+			"angle": 90
+		},
+		{
+			"name": "n4f",
+			"position": {
+				"x": 33,
+				"y": 35
+			},
+			"angle": 90
+		},
+		{
+			"name": "s4",
+			"position": {
+				"x": 24.4,
+				"y": 4
+			},
+			"angle": 270
+		},
+		{
+			"name": "s4f",
+			"position": {
+				"x": 24.4,
+				"y": -7
+			},
+			"angle": 270
+		},
+		{
+			"name": "s3",
+			"position": {
+				"x": 27.3,
+				"y": 4
+			},
+			"angle": 270
+		},
+		{
+			"name": "s3f",
+			"position": {
+				"x": 27.3,
+				"y": -7
+			},
+			"angle": 270
+		},
+		{
+			"name": "s2",
+			"position": {
+				"x": 30.2,
+				"y": 4
+			},
+			"angle": 90,
+			"trafficLights": "ts"
+		},
+		{
+			"name": "s2f",
+			"position": {
+				"x": 30.2,
+				"y": -7
+			},
+			"angle": 90
+		},
+		{
+			"name": "s1",
+			"position": {
+				"x": 33,
+				"y": 4
+			},
+			"angle": 90,
+			"trafficLights": "ts"
+		},
+		{
+			"name": "s1f",
+			"position": {
+				"x": 33,
+				"y": -7
+			},
+			"angle": 90
+		},
+		{
+			"name": "e1",
+			"position": {
+				"x": 42.5,
+				"y": 16.2
+			},
+			"angle": 180,
+			"trafficLights": "te"
+		},
+		{
+			"name": "e1f",
+			"position": {
+				"x": 64,
+				"y": 16.2
+			},
+			"angle": 180
+		},
+		{
+			"name": "e2",
+			"position": {
+				"x": 42.5,
+				"y": 12.2
+			},
+			"angle": 0
+		},
+		{
+			"name": "e2f",
+			"position": {
+				"x": 64,
+				"y": 12.2
+			},
+			"angle": 0
+		},
+		{
+			"name": "w2",
+			"position": {
+				"x": 15,
+				"y": 16.2
+			},
+			"angle": 180
+		},
+		{
+			"name": "w2f",
+			"position": {
+				"x": -8,
+				"y": 16.2
+			},
+			"angle": 180
+		},
+		{
+			"name": "w1",
+			"position": {
+				"x": 15,
+				"y": 12.2
+			},
+			"angle": 0,
+			"trafficLights": "tw"
+		},
+		{
+			"name": "w1f",
+			"position": {
+				"x": -8,
+				"y": 12.2
+			},
+			"angle": 0
+		}
+	],
+	"paths": [
+		{
+			"name": "n1fn1",
+			"from": {
+				"node": "n1f",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "n1",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "n2fn2",
+			"from": {
+				"node": "n2f",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "n2",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "n3n3f",
+			"from": {
+				"node": "n3",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "n3f",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "n4n4f",
+			"from": {
+				"node": "n4",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "n4f",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "s1fs1",
+			"from": {
+				"node": "s1f",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "s1",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "s2fs2",
+			"from": {
+				"node": "s2f",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "s2",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "s3s3f",
+			"from": {
+				"node": "s3",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "s3f",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "s4s4f",
+			"from": {
+				"node": "s4",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "s4f",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "e1fe1",
+			"from": {
+				"node": "e1f",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "e1",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "e2e2f",
+			"from": {
+				"node": "e2",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "e2f",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "w1fw1",
+			"from": {
+				"node": "w1f",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "w1",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "w2w2f",
+			"from": {
+				"node": "w2",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "w2f",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "n1s4",
+			"from": {
+				"node": "n1",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "s4",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "n1w2",
+			"from": {
+				"node": "n1",
+				"directionCoefficient": 20
+			},
+			"to": {
+				"node": "w2",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "n2s3",
+			"from": {
+				"node": "n2",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "s3",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "n2e2",
+			"from": {
+				"node": "n2",
+				"directionCoefficient": 30
+			},
+			"to": {
+				"node": "e2",
+				"directionCoefficient": 30
+			}
+		},
+		{
+			"name": "s1n4",
+			"from": {
+				"node": "s1",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "n4",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "s1e2",
+			"from": {
+				"node": "s1",
+				"directionCoefficient": 20
+			},
+			"to": {
+				"node": "e2",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "s2n3",
+			"from": {
+				"node": "s2",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "n3",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "s2w2",
+			"from": {
+				"node": "s2",
+				"directionCoefficient": 30
+			},
+			"to": {
+				"node": "w2",
+				"directionCoefficient": 30
+			}
+		},
+		{
+			"name": "e1w2",
+			"from": {
+				"node": "e1",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "w2",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "e1n4",
+			"from": {
+				"node": "e1",
+				"directionCoefficient": 20
+			},
+			"to": {
+				"node": "n4",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "e1s3",
+			"from": {
+				"node": "e1",
+				"directionCoefficient": 40
+			},
+			"to": {
+				"node": "s3",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "e1s4",
+			"from": {
+				"node": "e1",
+				"directionCoefficient": 50
+			},
+			"to": {
+				"node": "s4",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "w1e2",
+			"from": {
+				"node": "w1",
+				"directionCoefficient": 0
+			},
+			"to": {
+				"node": "e2",
+				"directionCoefficient": 0
+			}
+		},
+		{
+			"name": "w1s4",
+			"from": {
+				"node": "w1",
+				"directionCoefficient": 20
+			},
+			"to": {
+				"node": "s4",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "w1n3",
+			"from": {
+				"node": "w1",
+				"directionCoefficient": 40
+			},
+			"to": {
+				"node": "n3",
+				"directionCoefficient": 20
+			}
+		},
+		{
+			"name": "w1n4",
+			"from": {
+				"node": "w1",
+				"directionCoefficient": 50
+			},
+			"to": {
+				"node": "n4",
+				"directionCoefficient": 20
+			}
+		}
+	],
+	"trafficLights": [
+		{
+			"name": "te",
+			"position": {
+				"x": 40,
+				"y": 20
+			},
+			"angle": 0,
+			"phases": [
+				{
+					"state": "red",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				},
+				{
+					"state": "green",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				}
+			]
+		},
+		{
+			"name": "tw",
+			"position": {
+				"x": 17.5,
+				"y": 8
+			},
+			"angle": 180,
+			"phases": [
+				{
+					"state": "red",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				},
+				{
+					"state": "green",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				}
+			]
+		},
+		{
+			"name": "tn",
+			"position": {
+				"x": 22,
+				"y": 24
+			},
+			"angle": 90,
+			"phases": [
+				{
+					"state": "green",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				},
+				{
+					"state": "red",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				}
+			]
+		},
+		{
+			"name": "ts",
+			"position": {
+				"x": 36,
+				"y": 4
+			},
+			"angle": 270,
+			"phases": [
+				{
+					"state": "green",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				},
+				{
+					"state": "red",
+					"durationSeconds": 10
+				},
+				{
+					"state": "yellow",
+					"durationSeconds": 2
+				}
+			]
+		}
+	]
+}
